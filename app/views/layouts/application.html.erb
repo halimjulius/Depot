@@ -13,7 +13,13 @@
 </div>
 <div id="columns">
   <div id="side">
-    <%= Time.now%>
+    <p class="time">
+      <%= Time.now.strftime("%I:%M %p") %>
+      <br>
+      <% if (@count<=>5) == 1 %>
+        <%= pluralize(@count,"time") %>
+      <% end %>
+    </p>
     <ul>
       <li><a href="http://www....">Home</a></li>
       <li><a href="http://www..../faq">Questions</a></li>
