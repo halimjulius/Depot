@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
     :minimum => 10,
     :message => 'must be at least ten characters long.'
   }
-  validates :image_url, allow_blank: true, format: {
+  validates :image_url, allow_blank: true, uniqueness: true, format: {
     with:
       %r{\.(gif|jpg|png)$}i,
     message: 'must be a URL for GIF, JPG or PNG image.'
