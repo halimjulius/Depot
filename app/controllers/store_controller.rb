@@ -8,5 +8,6 @@ class StoreController < ApplicationController
       @count = nil
     end
     @products = Product.order(:title)
+    @cart = current_cart
   end
 end

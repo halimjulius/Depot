@@ -20,6 +20,13 @@
         <%= pluralize(@count,"time") %>
       <% end %>
     </p>
+    <div id="cart"
+      <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+          <%= render @cart %>
+        <% end %>
+      <% end %>
+    </div>
     <ul>
       <li><a href="http://www....">Home</a></li>
       <li><a href="http://www..../faq">Questions</a></li>
