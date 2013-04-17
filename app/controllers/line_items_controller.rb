@@ -83,10 +83,10 @@ class LineItemsController < ApplicationController
 
     # 2nd way: decrement through method in @line_item
     @line_item = @cart.line_items.find_by_id(params[:id])
-    @line_item = @line_item.decrement_quantity(@line_item.id)
+    # @line_item = @line_item.decrement_quantity(@line_item.id)
 
     respond_to do |format|
-      if @line_item.save
+      if (@line_item = @line_item.decrement_quantity!)
         format.html { redirect_to store_path, notice: 'Line item was successfully updated.' }
         format.js {@current_item = @line_item}
         format.json { head :ok }

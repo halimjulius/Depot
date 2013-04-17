@@ -17,7 +17,12 @@
 
 <p>
   <b>Pay type:</b>
-  <%= @order.pay_type %>
+  <%= @order.pay_type.name %>
+</p>
+
+<p>
+  <b>Ship Date:</b>
+  <%= @order.ship_date %>
 </p>
 
 

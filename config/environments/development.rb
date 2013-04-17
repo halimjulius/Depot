@@ -42,7 +42,7 @@ Depot::Application.configure do
     port: 587,
     domain: "domain.of.sender.net",
     authentication: "plain",
-    user_name: "julius.halim",
+    user_name: "julius.halim@bocistudio.com",
     password: "bocistudio123",
     enable_starttls_auto: true
   }
